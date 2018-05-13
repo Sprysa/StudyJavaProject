@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Dec 8, 2017 8:49:08 PM by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="Deposits" dynamic-insert="false" dynamic-update="false" mutable="true" name="package1.Program" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="Program">
+        <id name="id" type="int">
+            <column name="id"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="package1.Bank" embed-xml="true" fetch="select" insert="true" name="bank" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="idBank" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="package1.Currency" embed-xml="true" fetch="select" insert="true" name="currency" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="idCurrency" not-null="true"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="term" optimistic-lock="true" type="int" unique="false">
+            <column name="Term" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="percentage" optimistic-lock="true" type="double" unique="false">
+            <column name="Percentage" not-null="true" precision="53" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="programName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="ProgramName" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
