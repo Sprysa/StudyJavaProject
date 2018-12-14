@@ -5,7 +5,7 @@
         <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
         <property name="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
         <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
-        <property name="hibernate.connection.password">Sq#19yr93</property>
+        <property name="hibernate.connection.password">1234qwer</property>
         <property name="hibernate.connection.pool_size">1</property>
         <property name="hibernate.connection.url">jdbc:sqlserver://localhost;databaseName=Deposits</property>
         <property name="hibernate.connection.username">bogdan</property>
